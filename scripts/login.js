@@ -3,15 +3,19 @@ function obtenerElementos(){
     email = document.getElementById("txtEmail");
     pass = document.getElementById("txtPass");
     lblEG = document.getElementById("lblErrorGeneral");
+    gifLoad = document.getElementsByClassName("form-img")[0];
 }
 
 window.onload = () =>{
     comprobarSesion();
     obtenerElementos();
     ocultarLabels();
+    console.log(gifLoad);
     submit.onclick = (e) => {
         e.preventDefault();
         if (validarCampos()) {
+            lblEG.classList.toggle("hidden",true);
+            gifLoad.classList.toggle("hidden",false);
             realizarRequest();
         }
     }
@@ -22,7 +26,10 @@ function ingresar(info){
         localStorage.logged = "true";
         location = "./dashboard.html";
     }
-    else{lblEG.classList.toggle("hidden",false);}
+    else{
+        gifLoad.classList.toggle("hidden",true);
+        lblEG.classList.toggle("hidden",false);
+    }
 }
 
 function comprobarSesion(){

@@ -64,6 +64,11 @@
     text-align: center;
 }
 
+.form-img{
+    width: 20%;
+    height: 20%;
+}
+
 .hidden{
     display:none;
 }
