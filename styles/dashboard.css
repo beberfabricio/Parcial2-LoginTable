@@ -1,0 +1,33 @@
+.table-container{
+    margin: 150px auto;
+    width: 950px;
+}
+
+table{
+    text-align: left;
+    background-color: var(--blanco);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    padding: 10px;
+    border: solid 1px var(--negro);
+}
+
+thead{
+    font-weight: 700;
+    background-color: var(--verdeClaro);
+    border-bottom: solid 5px var(--verdeOscuro);
+    color:var(--blanco);
+}
+
+tr:nth-child(even){
+    background-color: var(--gris);
+}
+
+tr:hover td{
+    background-color: var(--verdeAgua);
+    color:var(--blanco);
+    cursor:pointer;
+}
