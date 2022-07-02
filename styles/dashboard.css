@@ -1,6 +1,18 @@
 .table-container{
-    margin: 150px auto;
+    margin: auto;
+    margin-top: 15px;
     width: 950px;
+}
+
+h2{
+    background-color: grey;
+    padding: 20px;
+    border-radius: 15px;
+    color:var(--verdeHeader);
+    font-size: 35px;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 30px;
 }
 
 table{

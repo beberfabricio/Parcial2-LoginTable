@@ -15,7 +15,7 @@ function realizarRequest() {
 }
 
 function llenarTabla(usuarios){
-    let head = "<tr><th>Usuario</th><th>Ciudad</th><th>Teléfono</th><th>Nombre de usuario</th><th>Email</th></tr>";
+    let head = "<tr><th>Nombre</th><th>Ciudad</th><th>Teléfono</th><th>Nombre de usuario</th><th>Email</th></tr>";
     let body = "";
     for (let i = 0; i < usuarios.length; i++) {
         body += `<tr><td>${usuarios[i].name}</td><td>${usuarios[i].address.city}</td>
