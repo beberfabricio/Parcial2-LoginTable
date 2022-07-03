@@ -19,7 +19,9 @@ function realizarRequest() {
     let url = "https://basic-server-one.vercel.app/users";
     fetch(url)
         .then(response => response.json())
-        .then(usuarios => llenarTabla(usuarios.data))
+        .then(usuarios => {
+            setTimeout(llenarTabla, 500, usuarios.data)
+        })
         .catch(error => console.log(error))
 }
 
