@@ -80,3 +80,7 @@ footer p{
     font-style: oblique;
     text-align: center;
 }
+
+.hidden{
+    display:none;
+}

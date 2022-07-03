@@ -69,10 +69,6 @@
     height: 20%;
 }
 
-.hidden{
-    display:none;
-}
-
 .form-btn{
     width: 100%;
     background-color: var(--verdeClaro);

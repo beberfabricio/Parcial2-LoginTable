@@ -1,12 +1,21 @@
+function obtenerElementos(){
+    logout = document.getElementById("logout");
+    loading = document.getElementsByClassName("gif")[0];
+    texto = document.getElementsByClassName("text")[0];
+}
+
 window.onload = () => {
+    obtenerElementos();
     if (localStorage.logged == "false") {
         cerrarSesion();
     }
-    document.getElementById("logout").onclick = cerrarSesion;
+    logout.onclick = cerrarSesion;
     realizarRequest();
 }
 
 function realizarRequest() {
+    loading.classList.toggle("hidden", false);
+    texto.classList.toggle("hidden", false);
     let url = "https://basic-server-one.vercel.app/users";
     fetch(url)
         .then(response => response.json())
@@ -15,6 +24,8 @@ function realizarRequest() {
 }
 
 function llenarTabla(usuarios){
+    loading.classList.toggle("hidden", true);
+    texto.classList.toggle("hidden", true);
     let head = "<tr><th>Nombre</th><th>Ciudad</th><th>Teléfono</th><th>Nombre de usuario</th><th>Email</th></tr>";
     let body = "";
     for (let i = 0; i < usuarios.length; i++) {
