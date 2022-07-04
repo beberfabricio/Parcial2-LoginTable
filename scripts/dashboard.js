@@ -28,11 +28,20 @@ function realizarRequest() {
 function llenarTabla(usuarios){
     loading.classList.toggle("hidden", true);
     texto.classList.toggle("hidden", true);
-    let head = "<tr><th>Nombre</th><th>Ciudad</th><th>Teléfono</th><th>Nombre de usuario</th><th>Email</th></tr>";
+    let head = `
+    <tr><th>Nombre</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Nombre de usuario</th>
+    <th>Email</th></tr>`;
     let body = "";
     for (let i = 0; i < usuarios.length; i++) {
-        body += `<tr><td>${usuarios[i].name}</td><td>${usuarios[i].address.city}</td>
-        <td>${usuarios[i].phone}</td><td>${usuarios[i].username}</td><td>${usuarios[i].email}</td></tr>`;
+        body += `
+        <tr><td>${usuarios[i].name}</td>
+        <td>${usuarios[i].address.city}</td>
+        <td>${usuarios[i].phone}</td>
+        <td>${usuarios[i].username}</td>
+        <td>${usuarios[i].email}</td></tr>`;
     }
     document.getElementById("encabezado").innerHTML = head;
     document.getElementById("contenido").innerHTML = body;
