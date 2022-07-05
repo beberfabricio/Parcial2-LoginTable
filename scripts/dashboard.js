@@ -1,6 +1,8 @@
 function obtenerElementos(){
-    logout = document.getElementById("logout");
     loading = document.getElementsByClassName("gif")[0];
+    btnLogout = document.getElementById("logout");
+    icoLogout = document.getElementsByClassName("logout-div")[0];
+    loadingNav = document.getElementsByClassName("gif-nav")[0];
     texto = document.getElementsByClassName("text")[0];
 }
 
@@ -9,7 +11,11 @@ window.onload = () => {
     if (localStorage.logged == "false") {
         cerrarSesion();
     }
-    logout.onclick = cerrarSesion;
+    btnLogout.onclick = () => {
+        icoLogout.classList.toggle("hidden", true);
+        loadingNav.classList.toggle("hidden",false);
+        setTimeout(cerrarSesion, 500);
+    }
     realizarRequest();
 }
 

@@ -42,6 +42,7 @@ header h1{
 
 header nav{
     display:inherit;
+    align-items: center;
     justify-content: space-around;
     width: 500px;
 }
@@ -81,4 +82,8 @@ footer p{
 
 .hidden{
     display:none;
+}
+
+.gif-nav{
+    width: 35px;
 }
