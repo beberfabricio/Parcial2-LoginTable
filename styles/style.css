@@ -52,10 +52,12 @@ header nav a{
     font-weight: 400;
     font-size: 22px;
     color:var(--negro);
+    transition: color .3s;
 }
 
 header nav i{
     font-size: 22px;
+    transition: color .3s;
 }
 
 header nav a:hover, i:hover{
