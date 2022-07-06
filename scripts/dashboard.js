@@ -1,3 +1,5 @@
+comprobarSesion();
+
 function obtenerElementos(){
     loading = document.getElementsByClassName("gif")[0];
     btnLogout = document.getElementById("logout");
@@ -8,9 +10,6 @@ function obtenerElementos(){
 
 window.onload = () => {
     obtenerElementos();
-    if (localStorage.logged == "false") {
-        cerrarSesion();
-    }
     btnLogout.onclick = () => {
         icoLogout.classList.toggle("hidden", true);
         loadingNav.classList.toggle("hidden",false);
@@ -51,6 +50,12 @@ function llenarTabla(usuarios){
     }
     document.getElementById("encabezado").innerHTML = head;
     document.getElementById("contenido").innerHTML = body;
+}
+
+function comprobarSesion(){
+    if (localStorage.logged == "false") {
+        cerrarSesion();
+    }
 }
 
 function cerrarSesion(){

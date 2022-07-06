@@ -1,3 +1,5 @@
+comprobarSesion();
+
 function obtenerElementos(){
     submit = document.getElementById("ingresar");
     email = document.getElementById("txtEmail");
@@ -7,7 +9,6 @@ function obtenerElementos(){
 }
 
 window.onload = () =>{
-    comprobarSesion();
     obtenerElementos();
     ocultarLabels();
     console.log(gifLoad);

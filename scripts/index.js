@@ -1,3 +1,1 @@
-window.onload = () => {
-    location = "./login.html";
-}
+window.location = "./login.html";
